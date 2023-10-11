@@ -11,6 +11,7 @@ import com.example.ddroidd_test.repository.JobListingRepository;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -39,5 +40,20 @@ public class AplicationService {
         return jobListingRepository.findJobListingsByEmployer(employer);
 
     }
+
+    public List<Applicant> findAllAplicantsByJobListing(Long jobListingId)
+        {
+            List<Applicant> applicants = new ArrayList<>();
+            List<Aplication> aplications = aplicationRepository.findAll();
+            for (Aplication app : aplications)
+            {
+                if (app.getJobListing().getId()==jobListingId)
+                {
+                    applicants.add(app.getApplicant());
+                }
+            }
+
+            return applicants;
+        }
 
 }

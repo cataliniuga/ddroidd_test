@@ -37,4 +37,9 @@ public class JobListingService{
 
     }
 
+    public void deleteJobListingById(Long jobListingId)
+    {
+        JobListing jobListing = jobListingRepository.findJobListingById(jobListingId);
+        jobListingRepository.delete(jobListing);
+    }
 }

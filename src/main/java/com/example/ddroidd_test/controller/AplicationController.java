@@ -6,6 +6,8 @@ import com.example.ddroidd_test.service.AplicationService;
 import com.example.ddroidd_test.service.EmployerService;
 import com.example.ddroidd_test.service.JobListingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,6 +33,11 @@ public class AplicationController {
         return aplicationService.save(applicantId, joblistingId);
     }
 
+    @GetMapping("/{jobListingId}")
+    public ResponseEntity<?> findApplicantsByJobListingId(@PathVariable Long jobListingId){
+        return new ResponseEntity<>(aplicationService.findAllAplicantsByJobListing(jobListingId), HttpStatus.OK);
+
+    }
 
 
 }

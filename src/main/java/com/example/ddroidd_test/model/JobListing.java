@@ -11,13 +11,13 @@ import lombok.*;
 @Table(name = "joblisting")
 public class JobListing {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "title")
     private String title;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "employer_id", referencedColumnName = "id")
-    Employer employer;
+    private Employer employer;
 }
