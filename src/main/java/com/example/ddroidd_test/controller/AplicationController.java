@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/aplications")
+@RequestMapping("/applications")
 public class AplicationController {
 
     @Autowired
@@ -26,9 +26,9 @@ public class AplicationController {
         return aplicationService.findAll();
     }
 
-    @PostMapping("/{employerId}/{joblistingId}")
-    public Aplication createJobListing(@PathVariable Long employerId, @PathVariable Long joblistingId) {
-        return aplicationService.save(employerId, joblistingId);
+    @PostMapping("/{applicantId}/{joblistingId}")
+    public Aplication createJobListing(@PathVariable Long applicantId, @PathVariable Long joblistingId) {
+        return aplicationService.save(applicantId, joblistingId);
     }
 
 

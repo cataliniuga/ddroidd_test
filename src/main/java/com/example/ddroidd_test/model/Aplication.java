@@ -15,15 +15,15 @@ public class Aplication {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "employer_id", referencedColumnName = "id")
-    Employer employer;
+    @JoinColumn(name = "applicant_id", referencedColumnName = "id")
+    Applicant applicant;
 
     @OneToOne
     @JoinColumn(name = "joblisting_id", referencedColumnName = "id")
     JobListing jobListing;
 
-    public Aplication(Employer employer, JobListing jobListing) {
-        this.employer = employer;
+    public Aplication(Applicant applicant, JobListing jobListing) {
+        this.applicant = applicant;
         this.jobListing = jobListing;
     }
 }
