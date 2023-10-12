@@ -46,3 +46,5 @@ city - string
 - Create a method that gets all applicants for an Employer - /applicants/{employerId} [GET]
 - Create a method that gets all applicants for a Job Listing - /applications/{jobListingId} [GET]
 - Create a method to delete a job listing - /jobs/delete/{jobListingId} [DELETE]
+
+![image](https://github.com/Sapilif/ddroidd_test/assets/117570113/fd71de4f-40b2-4887-8d91-fe28ec9348a7)
