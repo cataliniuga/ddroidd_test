@@ -20,7 +20,7 @@ public class AplicationController {
     }
 
     @PostMapping("/{applicantId}/{joblistingId}")
-    public Aplication createJobListing(@PathVariable Long applicantId, @PathVariable Long joblistingId) {
+    public Aplication createApplication(@PathVariable Long applicantId, @PathVariable Long joblistingId) {
         return aplicationService.save(applicantId, joblistingId);
     }
 
