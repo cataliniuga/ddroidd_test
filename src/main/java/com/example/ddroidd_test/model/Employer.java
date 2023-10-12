@@ -2,8 +2,14 @@ package com.example.ddroidd_test.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
+/*
+Employer - angajatorul
 
+id - long
+firstName - string
+lastname - string
+
+ */
 @Getter
 @Setter
 @Builder

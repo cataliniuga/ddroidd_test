@@ -1,10 +1,8 @@
 package com.example.ddroidd_test.controller;
-
 import com.example.ddroidd_test.model.Employer;
 import com.example.ddroidd_test.service.EmployerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -23,7 +21,6 @@ public class EmployerController {
     public Employer createEmployer(@RequestBody Employer employer) {
         return employerService.save(employer);
     }
-
 
 
 }

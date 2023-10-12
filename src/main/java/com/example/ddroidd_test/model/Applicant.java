@@ -2,6 +2,15 @@ package com.example.ddroidd_test.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+/*
+
+Aplicant - persoana ce poate aplica la un job listing
+
+id - long
+firstName - string
+lastName - string
+
+ */
 @Getter
 @Setter
 @Builder

@@ -1,8 +1,5 @@
 package com.example.ddroidd_test.controller;
-
-import com.example.ddroidd_test.model.Employer;
 import com.example.ddroidd_test.model.JobListing;
-import com.example.ddroidd_test.service.EmployerService;
 import com.example.ddroidd_test.service.JobListingService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +15,6 @@ public class JobListingController {
 
     @Autowired
     private JobListingService jobListingService;
-    @Autowired
-    private EmployerService employerService;
 
     @GetMapping
     public List<JobListing> getAllJobListings() {
@@ -41,13 +36,11 @@ public class JobListingController {
     public ResponseEntity<?> deleteJobListing(@PathVariable Long jobListingId){
         try {
             jobListingService.deleteJobListingById(jobListingId);
-            return ResponseEntity.ok("Job Listing deleted.");
+            return ResponseEntity.ok("Job sters!");
         } catch (EntityNotFoundException ex){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No Job Listing Found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Nu s-a gasit job-ul pe care doriti sa il stergeti.");
         }
     }
-    
-
 
 
 }

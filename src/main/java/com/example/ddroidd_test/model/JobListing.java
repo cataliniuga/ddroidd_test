@@ -1,8 +1,14 @@
 package com.example.ddroidd_test.model;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+/*
+JobListing - job-ul la care se poate aplica
 
+id - long
+title - string
+employerId - long, id-ul angajatorului care posteaza job listing-ul
+
+ */
 @Getter
 @Setter
 @Builder
