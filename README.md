@@ -1,7 +1,7 @@
-# ddroidd_test
+# ddroidd_test - Filipas Razvan
 
-Pentru realizarea proiectului s-a folosit Java, Spring Boot, Postgres.
-Pentru aplicatie am considerat urmatoarele entitati, cu atributele respective:
+#### Pentru realizarea proiectului s-a folosit Java, Spring Boot, Postgres.
+#### Pentru aplicatie am considerat urmatoarele entitati, cu atributele respective:
 
 
 ##### Employer - pentru angajator
