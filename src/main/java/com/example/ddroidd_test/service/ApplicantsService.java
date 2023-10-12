@@ -33,8 +33,8 @@ public class ApplicantsService {
     }
 
     public List<Applicant> findAllByEmployer(Long employerId){
-        Employer employer = employerRepository.findEmployerById(employerId);
-        List <JobListing> jobs = jobListingRepository.findJobListingsByEmployer(employer);
+        //Employer employer = employerRepository.findEmployerById(employerId);
+        List <JobListing> jobs = jobListingRepository.findJobListingsByEmployerId(employerId);
         List <Aplication> aplications = aplicationRepository.findAll();
         List <Applicant> applicants = new ArrayList<>();
 

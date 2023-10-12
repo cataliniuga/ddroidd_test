@@ -15,6 +15,6 @@ import java.util.List;
 public interface JobListingRepository extends JpaRepository<JobListing, Long> {
     public JobListing findJobListingById(Long jobListingId);
 
-    public List<JobListing> findJobListingsByEmployer(Employer employer);
+    public List<JobListing> findJobListingsByEmployerId(Long employerId);
 
 }

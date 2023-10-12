@@ -1,4 +1,5 @@
 package com.example.ddroidd_test.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +18,6 @@ public class JobListing {
     @Column(name = "title")
     private String title;
 
-    @ManyToOne
-    @JoinColumn(name = "employer_id", referencedColumnName = "id")
-    private Employer employer;
+    @Column(name="employer_id")
+    private Long employerId;
 }

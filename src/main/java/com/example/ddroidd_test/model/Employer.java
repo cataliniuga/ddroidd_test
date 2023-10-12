@@ -2,6 +2,8 @@ package com.example.ddroidd_test.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -19,4 +21,5 @@ public class Employer {
 
     @Column(name = "last_name")
     private String lastName;
+
 }

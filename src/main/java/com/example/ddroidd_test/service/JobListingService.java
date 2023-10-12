@@ -23,7 +23,8 @@ public class JobListingService{
 
     public JobListing save(JobListing jobListing, Long employerId){
         Employer employer = employerRepository.findEmployerById(employerId);
-        jobListing.setEmployer(employer);
+        jobListing.setEmployerId(employer.getId());
+        //System.out.println(jobListing.getEmployer().getFirstName());
         return jobListingRepository.save(jobListing);
     }
 
@@ -32,8 +33,8 @@ public class JobListingService{
     }
 
     public List<JobListing> findAllByEmployer(Long employerId){
-        Employer employer = employerRepository.findEmployerById(employerId);
-        return jobListingRepository.findJobListingsByEmployer(employer);
+        //Employer employer = employerRepository.findEmployerById(employerId);
+        return jobListingRepository.findJobListingsByEmployerId(employerId);
 
     }
 

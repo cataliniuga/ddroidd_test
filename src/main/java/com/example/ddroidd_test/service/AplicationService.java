@@ -36,8 +36,8 @@ public class AplicationService {
     }
 
     public List<JobListing> findAllByEmployer(Long employerId){
-        Employer employer = employerRepository.findEmployerById(employerId);
-        return jobListingRepository.findJobListingsByEmployer(employer);
+        //Employer employer = employerRepository.findEmployerById(employerId);
+        return jobListingRepository.findJobListingsByEmployerId(employerId);
 
     }
 
@@ -46,9 +46,9 @@ public class AplicationService {
             List<Applicant> applicants = new ArrayList<>();
             List<Aplication> aplications = aplicationRepository.findAll();
             for (Aplication app : aplications)
-            {
-                if (app.getJobListing().getId()==jobListingId)
-                {
+            {   System.out.println("dadadadadadda2");
+                if (app.getJobListing().getId().equals(jobListingId))
+                {   System.out.println("dadadadadadda");
                     applicants.add(app.getApplicant());
                 }
             }
