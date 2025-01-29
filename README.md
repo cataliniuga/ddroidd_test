@@ -1,6 +1,6 @@
 # ddroidd_test - Filipas Razvan
 
-#### Pentru realizarea proiectului s-a folosit Java, Spring Boot, Postgres.
+#### Pentru realizarea proiectului s-a folosit Java, Spring Boot, SQLite.
 #### Pentru aplicatie am considerat urmatoarele entitati, cu atributele respective:
 
 
