@@ -6,6 +6,9 @@ import com.example.ddroidd_test.repository.AplicationRepository;
 import com.example.ddroidd_test.repository.ApplicantRepository;
 import com.example.ddroidd_test.repository.JobListingRepository;
 import jakarta.annotation.Resource;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +64,8 @@ public class ApplicantsService {
         return applicants;
         }
 
-
-
-
-
+    public ResponseEntity<?> delete(Long applicantId) {
+        applicantRepository.deleteById(applicantId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

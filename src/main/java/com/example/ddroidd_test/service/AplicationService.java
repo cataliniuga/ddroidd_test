@@ -4,7 +4,6 @@ import com.example.ddroidd_test.model.Applicant;
 import com.example.ddroidd_test.model.JobListing;
 import com.example.ddroidd_test.repository.AplicationRepository;
 import com.example.ddroidd_test.repository.ApplicantRepository;
-import com.example.ddroidd_test.repository.EmployerRepository;
 import com.example.ddroidd_test.repository.JobListingRepository;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
